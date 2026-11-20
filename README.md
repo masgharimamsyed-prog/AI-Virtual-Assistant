@@ -1,16 +1,137 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# AI Virtual Assistant
 
-Currently, two official plugins are available:
+An AI-powered voice assistant built with React.js and Google's Gemini API. It allows users to interact with an AI assistant through voice commands, convert speech into text, and receive AI-generated responses through speech synthesis.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+This project explores the integration of Artificial Intelligence and voice-based interaction in a modern React application. It combines speech recognition, text-to-speech, and Google's Gemini API to create an interactive virtual assistant.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- **Voice Recognition:** Capture user commands through the microphone.
+- **Speech-to-Text:** Convert spoken input into readable text.
+- **AI-Powered Responses:** Generate intelligent responses using Google Gemini.
+- **Text-to-Speech:** Convert AI responses into spoken audio.
+- **Google Search Integration:** Enable search capabilities through Gemini tools.
+- **Loading Indicators:** Provide feedback while processing requests.
+- **Error Handling:** Display API and application errors on the interface.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | User interface |
+| JavaScript | Application logic |
+| CSS | Styling |
+| Vite | Development environment |
+| Google Gemini API | AI response generation |
+| Web Speech API | Voice recognition and speech synthesis |
+| React Icons | UI icons |
+| React Loader Spinner | Loading indicators |
+
+## Project Structure
+
+```text
+AI-Virtual-Assistant/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── gemini.js
+│   └── main.jsx
+│
+├── .env
+├── .gitignore
+├── index.html
+├── package.json
+└── README.md
+```
+
+## Getting Started
+
+Follow these instructions to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+- Google Gemini API key
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+**2. Navigate to the project directory**
+
+```bash
+cd AI-Virtual-Assistant
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Configure environment variables**
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_GEMINI_API_KEY=your_api_key_here
+```
+
+Get your API key from [Google AI Studio](https://aistudio.google.com/apikey).
+
+**5. Start the development server**
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+## Environment Variables
+
+The application uses environment variables to configure API access.
+
+| Variable | Description |
+|---|---|
+| VITE_GEMINI_API_KEY | Google Gemini API key |
+
+**Security Note:** Environment variables prefixed with `VITE_` are exposed in client-side code. For production applications, API requests should be handled through a secure backend. Never commit your `.env` file to GitHub.
+
+## Browser Compatibility
+
+Voice recognition and speech synthesis depend on browser support. Allow microphone access when prompted.
+
+## Future Improvements
+
+- [ ] Support for multiple languages.
+- [ ] Additional voice and speech options.
+- [ ] Conversational context and memory.
+- [ ] Improved responsive design.
+- [ ] Backend integration for secure API handling.
+- [ ] Customizable assistant settings.
+
+## Author
+
+**Asghar Imam Syed**
+
+Computer Science Student | Frontend Developer
+
+- GitHub: [@masgharimamsyed-prog](https://github.com/masgharimamsyed-prog)
+- LinkedIn: [Asghar Imam](https://www.linkedin.com/in/asghar-imam/)
+
+---
+
+If you find this project useful or interesting, consider giving it a star.
