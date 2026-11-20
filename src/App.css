@@ -1,0 +1,53 @@
+body{
+  overflow:hidden ;
+}
+#full-div {
+  background-color: rgb(245, 246, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#robot-img {
+  height: 350px;
+  width: 320px;
+
+}
+#intro-text{
+ font-family: "Poppins", sans-serif;
+}
+
+#speak-btn {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#speak-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#mic-img{
+height: 150px;
+}
+
+.error-message {
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+}
