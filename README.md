@@ -53,6 +53,54 @@ AI-Virtual-Assistant/
 
 ```
 
+add-groq-gemini-fallback
+**2. Navigate to the project directory**
+
+```bash
+cd AI-Virtual-Assistant
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Configure environment variables**
+
+Create a `.env` file in the root directory (copy `.env.example`):
+
+Answers are tried in order: Groq (two models), then Gemini key 1, then Gemini key 2. The keys are only used by the server function in `api/chat.js`, so they are never sent to the browser.
+
+**5. Start the development server**
+
+```bash
+npm run dev
+```
+
+Open the local URL provided by Vite in your browser.
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| GROQ_API_KEY | Groq API key |
+| GEMINI_API_KEY | One or more Gemini keys, comma-separated |
+| GROQ_MODEL | Optional: Groq model to try first |
+
+## Deploying to Vercel
+
+1. Push the project to GitHub (never upload `.env`).
+2. Import the repo on [vercel.com](https://vercel.com).
+3. Under Settings, Environment Variables, add `GROQ_API_KEY` and `GEMINI_API_KEY`.
+4. Deploy. The `api/chat.js` function runs on the server and keeps the keys private.
+
+## Browser Compatibility
+
+Voice recognition and speech synthesis depend on browser support. Allow microphone access when prompted.
+
+
+main
 ## Future Improvements
 
 - [ ] Support for multiple languages.

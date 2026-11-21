@@ -13,15 +13,17 @@ export const UserProvider = ({ children }) => {
     const [error, setError] = useState("");
 
     function speak(text) {
+        window.speechSynthesis.cancel();
 
-        let text_speak = new SpeechSynthesisUtterance(text);
+        const text_speak = new SpeechSynthesisUtterance(text);
         text_speak.volume = 1;
         text_speak.rate = 1;
         text_speak.pitch = 1;
-        text_speak.lang = "en-US  "
-        setAiSpeaking(true);
+        text_speak.lang = "en-US";
+        text_speak.onstart = () => setAiSpeaking(true);
+        text_speak.onend = () => setAiSpeaking(false);
+        text_speak.onerror = () => setAiSpeaking(false);
         window.speechSynthesis.speak(text_speak);
-        setAiSpeaking(false);
     }
 
     async function Aiprompting(prompt) {
