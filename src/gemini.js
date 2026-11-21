@@ -14,14 +14,14 @@ async function main(prompt, setLoader, speak, setError) {
         }
 
         console.log(`Answered by ${data.provider}`);
-        console.log(data.reply);
+       
 
         // Remove citation references before speaking
         const cleanReply = data.reply
             .replace(/\[\d+†[^\]]*\]/g, "")
             .replace(/\s{2,}/g, " ")
             .trim();
-
+         console.log(cleanReply);
         speak(cleanReply);
 
     } catch (err) {
