@@ -13,6 +13,7 @@ async function main(prompt, setLoader, speak, setError) {
         if (!res.ok) throw new Error(data.error || `Request failed (${res.status})`);
 
         console.log(`Answered by ${data.provider}`);
+        console.log(data.reply);
         speak(data.reply);
     } catch (err) {
         console.error(err);
