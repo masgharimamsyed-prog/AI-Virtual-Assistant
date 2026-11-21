@@ -50,26 +50,10 @@ AI-Virtual-Assistant/
 ├── index.html
 ├── package.json
 └── README.md
+
 ```
 
-## Getting Started
-
-Follow these instructions to run the project locally.
-
-### Prerequisites
-
-- Node.js
-- npm
-- Google Gemini API key
-
-### Installation
-
-**1. Clone the repository**
-
-```bash
-git clone YOUR_REPOSITORY_URL
-```
-
+add-groq-gemini-fallback
 **2. Navigate to the project directory**
 
 ```bash
@@ -85,11 +69,6 @@ npm install
 **4. Configure environment variables**
 
 Create a `.env` file in the root directory (copy `.env.example`):
-
-```env
-GROQ_API_KEY=your_groq_key
-GEMINI_API_KEY=your_gemini_key_1,your_gemini_key_2
-```
 
 Answers are tried in order: Groq (two models), then Gemini key 1, then Gemini key 2. The keys are only used by the server function in `api/chat.js`, so they are never sent to the browser.
 
@@ -120,6 +99,8 @@ Open the local URL provided by Vite in your browser.
 
 Voice recognition and speech synthesis depend on browser support. Allow microphone access when prompted.
 
+
+main
 ## Future Improvements
 
 - [ ] Support for multiple languages.
