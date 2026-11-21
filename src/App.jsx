@@ -1,6 +1,7 @@
 
 import { useContext } from "react";
 import Loader from "./components/loader";
+import Robot from "./components/Robot";
 
 import { FaMicrophone } from "react-icons/fa";
 import { UserContext } from "./context/userContext";
@@ -21,17 +22,7 @@ function App() {
       )}
 
       <div id="full-div">
-        {aispeaking ?
-          <img
-            src="/images/robot-speaking.gif"
-            alt="robot img"
-            id="robot-img"
-          />
-          : <img
-            src="/images/robotImg.png"
-            alt="robot img"
-            id="robot-img"
-          />}
+        <Robot speaking={aispeaking} />
 
 
         <p id="intro-text">

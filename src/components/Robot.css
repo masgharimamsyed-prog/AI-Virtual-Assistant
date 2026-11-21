@@ -1,0 +1,58 @@
+.robot {
+  width: 300px;
+  height: 325px;
+  animation: robot-float 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.35));
+}
+
+.robot-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.eyes {
+  transform-origin: 120px 116px;
+  animation: robot-blink 4s infinite;
+}
+
+.antenna {
+  animation: robot-pulse 1.6s ease-in-out infinite;
+}
+
+.mouth {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* talking state */
+.robot-speaking {
+  filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.7));
+}
+
+.robot-speaking .mouth {
+  animation: robot-talk 0.28s ease-in-out infinite alternate;
+}
+
+.robot-speaking .antenna {
+  animation-duration: 0.5s;
+}
+
+@keyframes robot-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes robot-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.1); }
+}
+
+@keyframes robot-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes robot-talk {
+  from { transform: scaleY(0.5) scaleX(0.8); }
+  to { transform: scaleY(2.2) scaleX(1.1); }
+}

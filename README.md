@@ -84,13 +84,14 @@ npm install
 
 **4. Configure environment variables**
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory (copy `.env.example`):
 
 ```env
-VITE_GEMINI_API_KEY=your_api_key_here
+GROQ_API_KEY=your_groq_key
+GEMINI_API_KEY=your_gemini_key_1,your_gemini_key_2
 ```
 
-Get your API key from [Google AI Studio](https://aistudio.google.com/apikey).
+Answers are tried in order: Groq (two models), then Gemini key 1, then Gemini key 2. The keys are only used by the server function in `api/chat.js`, so they are never sent to the browser.
 
 **5. Start the development server**
 
@@ -102,13 +103,18 @@ Open the local URL provided by Vite in your browser.
 
 ## Environment Variables
 
-The application uses environment variables to configure API access.
-
 | Variable | Description |
 |---|---|
-| VITE_GEMINI_API_KEY | Google Gemini API key |
+| GROQ_API_KEY | Groq API key |
+| GEMINI_API_KEY | One or more Gemini keys, comma-separated |
+| GROQ_MODEL | Optional: Groq model to try first |
 
-**Security Note:** Environment variables prefixed with `VITE_` are exposed in client-side code. For production applications, API requests should be handled through a secure backend. Never commit your `.env` file to GitHub.
+## Deploying to Vercel
+
+1. Push the project to GitHub (never upload `.env`).
+2. Import the repo on [vercel.com](https://vercel.com).
+3. Under Settings, Environment Variables, add `GROQ_API_KEY` and `GEMINI_API_KEY`.
+4. Deploy. The `api/chat.js` function runs on the server and keeps the keys private.
 
 ## Browser Compatibility
 
