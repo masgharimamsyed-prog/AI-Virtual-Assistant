@@ -51,7 +51,7 @@ AI-Virtual-Assistant/
 ├── package.json
 └── README.md
 
-
+---------------------------
 ## Future Improvements
 
 - [ ] Support for multiple languages.
