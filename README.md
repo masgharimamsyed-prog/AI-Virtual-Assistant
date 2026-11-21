@@ -100,16 +100,6 @@ npm run dev
 
 Open the local URL provided by Vite in your browser.
 
-## Environment Variables
-
-The application uses environment variables to configure API access.
-
-| Variable | Description |
-|---|---|
-| VITE_GEMINI_API_KEY | Google Gemini API key |
-
-**Security Note:** Environment variables prefixed with `VITE_` are exposed in client-side code. For production applications, API requests should be handled through a secure backend. Never commit your `.env` file to GitHub.
-
 ## Browser Compatibility
 
 Voice recognition and speech synthesis depend on browser support. Allow microphone access when prompted.
