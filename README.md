@@ -50,59 +50,7 @@ AI-Virtual-Assistant/
 ├── index.html
 ├── package.json
 └── README.md
-```
 
-## Getting Started
-
-Follow these instructions to run the project locally.
-
-### Prerequisites
-
-- Node.js
-- npm
-- Google Gemini API key
-
-### Installation
-
-**1. Clone the repository**
-
-```bash
-git clone YOUR_REPOSITORY_URL
-```
-
-**2. Navigate to the project directory**
-
-```bash
-cd AI-Virtual-Assistant
-```
-
-**3. Install dependencies**
-
-```bash
-npm install
-```
-
-**4. Configure environment variables**
-
-Create a `.env` file in the root directory:
-
-```env
-VITE_GEMINI_API_KEY=your_api_key_here
-```
-
-Get your API key from [Google AI Studio](https://aistudio.google.com/apikey).
-
-**5. Start the development server**
-
-```bash
-npm run dev
-```
-
-Open the local URL provided by Vite in your browser.
-
-## Browser Compatibility
-
-Voice recognition and speech synthesis depend on browser support. Allow microphone access when prompted.
 
 ## Future Improvements
 
